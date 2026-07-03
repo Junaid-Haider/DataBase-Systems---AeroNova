@@ -573,6 +573,7 @@ Running `npm run seed` populates the database with realistic interconnected data
 
 **Muhammad Abdullah**
 - GitHub: [@muhammad-abdullah-nova-dev](https://github.com/muhammad-abdullah-nova-dev)
+
 **Junaid Haider**
 - GitHub: [@Junaid-Haider](https://github.com/Junaid-Haider)
 
