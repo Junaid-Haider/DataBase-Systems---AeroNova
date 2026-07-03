@@ -1,0 +1,19 @@
+import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../lib/stores/authStore';
+
+export default function AuthGuard({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated } = useAuthStore();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login', { state: { from: location.pathname } });
+    }
+  }, [isAuthenticated, navigate, location]);
+
+  if (!isAuthenticated) return null;
+
+  return <>{children}</>;
+}
